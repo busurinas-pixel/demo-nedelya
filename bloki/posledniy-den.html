@@ -1,0 +1,122 @@
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+.dn{--bg:#120900;--card:#241a10;--line:#4a3a26;--gold:#e0bd7c;--gold2:#c79a4f;--cream:#ffecd2;--txt:#f6efe4;--muted:#c2b5a3;--orange:#ff9800;--orange2:#ffb648;--sans:"Manrope","Segoe UI",Arial,sans-serif;--head:"Oswald","Arial Narrow",Arial,sans-serif;background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.5;width:100%}
+.dn *{box-sizing:border-box}
+.dn a{text-decoration:none}
+.dn h1,.dn h2,.dn h3,.dn p{margin:0;padding:0}
+.dn h2{font:600 34px/1.15 var(--head);text-transform:uppercase;color:var(--gold);letter-spacing:.2px}
+.dn h3{font:800 18px/1.3 var(--sans);color:var(--txt)}
+.dn a:focus-visible,.dn button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.dn-in{max-width:1100px;margin:0 auto;padding:0 40px}
+.dn-sec{padding:44px 0 0}
+.dn-lead{color:var(--muted);margin-top:8px;max-width:720px}
+.dn-muted{color:var(--muted)}
+.dn-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 40px;border-bottom:1px solid var(--line)}
+.dn-logo{background:var(--cream);border-radius:8px;padding:5px 9px;display:block;line-height:0}
+.dn-logo img{height:36px;width:auto}
+.dn-nav{display:flex;gap:18px;align-items:center;font-weight:600;font-size:14px}
+.dn a.dn-link{color:var(--cream);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.dn a.dn-link:hover{color:var(--orange2)}
+.dn a.dn-btn{display:inline-block;border:0;border-radius:10px;padding:16px 24px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:15px;line-height:1.25;text-align:center;background:linear-gradient(180deg,var(--orange2),var(--orange));color:#120900;box-shadow:0 4px 0 #b86a00;transition:transform .08s,filter .12s}
+.dn a.dn-btn:hover{filter:brightness(1.08)}
+.dn a.dn-btn:active{transform:translateY(3px);box-shadow:0 1px 0 #b86a00}
+.dn a.dn-ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold);box-shadow:none}
+.dn a.dn-ghost:hover{background:#e0bd7c22;filter:none}
+.dn a.dn-small{padding:11px 16px;font-size:13px}
+.dn-hero{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch;padding-top:32px}
+.dn-pill{display:inline-block;border:1px solid var(--gold);border-radius:10px;padding:7px 13px;color:var(--gold);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.3px}
+.dn h1.dn-h1{font:600 60px/1.06 var(--head);text-transform:uppercase;margin:16px 0 12px;background:linear-gradient(180deg,#f0d9a6,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dn-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.dn-portrait{background:linear-gradient(180deg,#f0dcb8,#c79a4f);border-radius:16px;overflow:hidden;min-height:300px;position:relative}
+.dn-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;mix-blend-mode:multiply}
+.dn-days{display:none;gap:8px;margin-top:18px;overflow-x:auto;padding:3px 3px 8px}
+.dn-js .dn-days{display:flex}
+.dn button.dn-day{flex:1 0 auto;min-width:72px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;text-align:center;color:var(--txt);font-family:var(--sans);cursor:pointer}
+.dn button.dn-day:hover{border-color:var(--gold)}
+.dn-day b{display:block;font-size:17px}
+.dn-day span{font-size:12px;color:var(--muted)}
+.dn button.dn-day[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#120900}
+.dn button.dn-day[aria-pressed=true] span{color:#3d2c12}
+.dn-panel{display:grid;gap:10px;margin-top:14px}
+.dn-panel-t{font-weight:800;color:var(--gold)}
+.dn-js .dn-panel-t{display:none}
+.dn-js .dn-panel{display:none;margin-top:8px}
+.dn-js .dn-panel.dn-on{display:grid}
+.dn-step{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.dn-ic{width:44px;height:44px;border-radius:10px;background:#e0bd7c26;color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;line-height:1.05;text-align:center}
+.dn-step small,.dn-ev small{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:2px}
+.dn-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.dn a.dn-lesson{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;color:var(--txt);transition:border-color .12s,transform .12s}
+.dn a.dn-lesson:hover{border-color:var(--gold);transform:translateY(-2px)}
+.dn-cover{height:128px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 130% at 90% 0,#7a4f15 0,#2a1a08 62%);border-bottom:1px solid var(--line)}
+.dn-n{font:600 44px/1 var(--head);color:var(--gold)}
+.dn-b{font-size:12px;font-weight:700;color:var(--cream);text-transform:uppercase;letter-spacing:.3px;line-height:1.25}
+.dn-lin{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dn-lin p{font-size:14px;color:var(--muted);line-height:1.45}
+.dn-go{margin-top:auto;padding-top:6px;color:var(--orange2);font-weight:800;font-size:14px}
+.dn-ratio{display:grid;grid-template-columns:150px 1fr;gap:24px;background:linear-gradient(135deg,#2e2110,#1a1006);border:1px solid var(--gold2);border-radius:16px;padding:24px;margin-top:18px}
+.dn-ratio img{width:150px;height:150px;border-radius:14px;object-fit:cover}
+.dn-tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.dn-tag{border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13.5px;font-weight:600;background:#120900}
+.dn-lock{color:var(--muted);border-style:dashed}
+.dn-note{font-size:13.5px;color:var(--muted);margin-top:12px}
+.dn-two{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;margin-top:18px;align-items:start}
+.dn-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px 14px}
+.dn-pad{padding:18px}
+.dn-box ul{margin:8px 0 14px;padding-left:19px;color:var(--muted);font-size:14.5px}
+.dn-box li{margin:5px 0}
+.dn-ev{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.dn-ev:first-child{border-top:0}
+.dn-d{color:var(--gold);font-size:15px;line-height:1.3;font-weight:800}
+.dn a.dn-lockrow{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#1a120a;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;color:var(--muted);margin-top:8px;font-weight:600;font-size:15px}
+.dn a.dn-lockrow:hover{border-color:var(--gold);color:var(--txt)}
+.dn-lockrow em{font-style:normal;font-size:12.5px;white-space:nowrap;color:var(--gold)}
+.dn-offer{margin:48px 0 0;padding:30px 40px;background:linear-gradient(135deg,#3b2a12,#1c130a);border-top:1px solid var(--gold2);display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.dn-offer h2{font-size:30px}
+.dn-foot{padding:20px 40px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.dn-title{font:600 44px/1.1 var(--head);text-transform:uppercase;color:var(--gold);margin-top:8px}
+.dn-lockpage{max-width:660px;margin:0 auto;padding:44px 0;text-align:center}
+.dn-bigl{width:76px;height:76px;margin:0 auto 14px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:32px}
+.dn-lockpage p{color:var(--muted);margin:12px auto 22px;max-width:520px}
+.dn-timer{display:inline-flex;gap:8px;margin-top:16px}
+.dn-timer div{background:var(--card);border:1px solid var(--gold2);border-radius:10px;padding:8px 13px;text-align:center;font-size:12px;color:var(--muted)}
+.dn-timer b{display:block;font:600 32px/1.1 var(--head);color:var(--gold)}
+.dn-ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.dn-ba div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.dn-ba b{display:block;color:var(--gold);font-size:14px;margin-bottom:3px}
+@media (max-width:760px){
+.dn-in{padding:0 18px}
+.dn-top{padding:12px 18px}
+.dn-hide{display:none}
+.dn-sec{padding-top:34px}
+.dn h2{font-size:27px}
+.dn-hero{grid-template-columns:1fr;padding-top:22px}
+.dn h1.dn-h1{font-size:40px}
+.dn-pill{font-size:11.5px}
+.dn-portrait{min-height:230px}
+.dn-acts a.dn-btn,.dn-step a.dn-btn,.dn-ratio a.dn-btn,.dn-offer a.dn-btn,.dn-lockpage a.dn-btn{width:100%}
+.dn-step{grid-template-columns:40px 1fr;padding:13px}
+.dn-step a.dn-btn{grid-column:1/-1}
+.dn-ic{width:40px;height:40px}
+.dn-grid3,.dn-two,.dn-ba{grid-template-columns:1fr}
+.dn-cover{height:96px}
+.dn-ratio{grid-template-columns:1fr;padding:18px}
+.dn-ratio img{width:96px;height:96px}
+.dn-offer{padding:24px 18px}
+.dn-foot{padding:18px}
+.dn-title{font-size:32px}
+.dn-lockpage{padding:30px 0}
+.dn-timer b{font-size:27px}
+.dn-lockrow em{white-space:normal;text-align:right}
+.dn-top a.dn-link{min-height:44px;display:flex;align-items:center}
+}
+body{background:#120900}
+</style>
+<div class="dn"><header class="dn-top"><span class="dn-logo"><img src="IMG_LOGO" alt="Академия переговоров Игоря Рызова"></span><nav class="dn-nav"><a class="dn-link" href="LINK_GLAVNAYA" target="_blank" rel="noopener">← К плану недели</a></nav></header><div class="dn-in"><span class="dn-pill" style="margin-top:28px">Демо-неделя заканчивается</span><div class="dn-title" style="font-size:48px">Демо-доступ закрывается 15 ноября в 23:59 МСК</div><div class="dn-timer" id="dn-timer"><div><b data-h>--</b>часов</div><div><b data-m>--</b>минут</div><div><b data-s>--</b>секунд</div></div><section class="dn-sec" style="padding-top:30px"><h2>Что изменилось за неделю</h2><p class="dn-lead">Сравните первый замер и повторный. Результат есть в Мистере Рацио.</p><div class="dn-ba"><div><b>9 ноября</b>Первый спарринг: точка отсчёта</div><div><b>14 ноября</b>Повторный замер: сравнение с первым днём</div></div><div class="dn-acts"><a class="dn-btn dn-ghost" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Открыть мой результат</a></div></section><section class="dn-sec" style="padding-bottom:40px"><h2>Продолжите с того места, где остановились</h2><p class="dn-lead">15 ноября стартует поток. Уроки и задания сохранятся, 990 ₽ засчитаются в оплату любого тарифа. ИИ-тренажёр входит в тарифы Карьера, Бизнес и Тренер.</p><div class="dn-acts"><a class="dn-btn" href="LINK_TARIFY">Выбрать тариф</a><a class="dn-btn dn-ghost" href="LINK_MENEDZHER">Задать вопрос менеджеру</a></div></section></div></div>
+<script>
+(function(){var e=document.getElementById('dn-timer');if(!e)return;var end=Date.UTC(2026,10,15,20,59,0);
+function p(n){return (n<10?'0':'')+n}
+function tick(){var s=Math.max(0,Math.floor((end-Date.now())/1000));
+e.querySelector('[data-h]').textContent=p(Math.floor(s/3600));e.querySelector('[data-m]').textContent=p(Math.floor(s%3600/60));e.querySelector('[data-s]').textContent=p(s%60)}
+tick();setInterval(tick,1000)})();
+</script>
