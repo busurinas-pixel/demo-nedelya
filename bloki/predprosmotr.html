@@ -1,0 +1,159 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Предпросмотр блоков</title></head><body style="margin:0;background:#120900"><div style="background:#f3f1ee;color:#222;font:700 14px Arial,sans-serif;padding:9px 16px">Главная</div><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+.dn{--bg:#120900;--card:#241a10;--line:#4a3a26;--gold:#e0bd7c;--gold2:#c79a4f;--cream:#ffecd2;--txt:#f6efe4;--muted:#c2b5a3;--orange:#ff9800;--orange2:#ffb648;--sans:"Manrope","Segoe UI",Arial,sans-serif;--head:"Oswald","Arial Narrow",Arial,sans-serif;background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.5;width:100%}
+.dn *{box-sizing:border-box}
+.dn a{text-decoration:none}
+.dn h1,.dn h2,.dn h3,.dn p{margin:0;padding:0}
+.dn h2{font:600 34px/1.15 var(--head);text-transform:uppercase;color:var(--gold);letter-spacing:.2px}
+.dn h3{font:800 18px/1.3 var(--sans);color:var(--txt)}
+.dn a:focus-visible,.dn button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.dn-in{max-width:1100px;margin:0 auto;padding:0 40px}
+.dn-sec{padding:44px 0 0}
+.dn-lead{color:var(--muted);margin-top:8px;max-width:720px}
+.dn-muted{color:var(--muted)}
+.dn-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 40px;border-bottom:1px solid var(--line)}
+.dn-logo{background:var(--cream);border-radius:8px;padding:5px 9px;display:block;line-height:0}
+.dn-logo img{height:36px;width:auto}
+.dn-nav{display:flex;gap:18px;align-items:center;font-weight:600;font-size:14px}
+.dn a.dn-link{color:var(--cream);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.dn a.dn-link:hover{color:var(--orange2)}
+.dn a.dn-btn{display:inline-block;border:0;border-radius:10px;padding:16px 24px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:15px;line-height:1.25;text-align:center;background:linear-gradient(180deg,var(--orange2),var(--orange));color:#120900;box-shadow:0 4px 0 #b86a00;transition:transform .08s,filter .12s}
+.dn a.dn-btn:hover{filter:brightness(1.08)}
+.dn a.dn-btn:active{transform:translateY(3px);box-shadow:0 1px 0 #b86a00}
+.dn a.dn-ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold);box-shadow:none}
+.dn a.dn-ghost:hover{background:#e0bd7c22;filter:none}
+.dn a.dn-small{padding:11px 16px;font-size:13px}
+.dn-hero{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch;padding-top:32px}
+.dn-pill{display:inline-block;border:1px solid var(--gold);border-radius:10px;padding:7px 13px;color:var(--gold);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.3px}
+.dn h1.dn-h1{font:600 60px/1.06 var(--head);text-transform:uppercase;margin:16px 0 12px;background:linear-gradient(180deg,#f0d9a6,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dn-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.dn-portrait{background:linear-gradient(180deg,#f0dcb8,#c79a4f);border-radius:16px;overflow:hidden;min-height:300px;position:relative}
+.dn-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;mix-blend-mode:multiply}
+.dn-days{display:none;gap:8px;margin-top:18px;overflow-x:auto;padding:3px 3px 8px}
+.dn-js .dn-days{display:flex}
+.dn button.dn-day{flex:1 0 auto;min-width:72px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;text-align:center;color:var(--txt);font-family:var(--sans);cursor:pointer}
+.dn button.dn-day:hover{border-color:var(--gold)}
+.dn-day b{display:block;font-size:17px}
+.dn-day span{font-size:12px;color:var(--muted)}
+.dn button.dn-day[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#120900}
+.dn button.dn-day[aria-pressed=true] span{color:#3d2c12}
+.dn-panel{display:grid;gap:10px;margin-top:14px}
+.dn-panel-t{font-weight:800;color:var(--gold)}
+.dn-js .dn-panel-t{display:none}
+.dn-js .dn-panel{display:none;margin-top:8px}
+.dn-js .dn-panel.dn-on{display:grid}
+.dn-step{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.dn-ic{width:44px;height:44px;border-radius:10px;background:#e0bd7c26;color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;line-height:1.05;text-align:center}
+.dn-step small,.dn-ev small{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:2px}
+.dn-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.dn a.dn-lesson{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;color:var(--txt);transition:border-color .12s,transform .12s}
+.dn a.dn-lesson:hover{border-color:var(--gold);transform:translateY(-2px)}
+.dn-cover{height:128px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 130% at 90% 0,#7a4f15 0,#2a1a08 62%);border-bottom:1px solid var(--line)}
+.dn-n{font:600 44px/1 var(--head);color:var(--gold)}
+.dn-b{font-size:12px;font-weight:700;color:var(--cream);text-transform:uppercase;letter-spacing:.3px;line-height:1.25}
+.dn-lin{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dn-lin p{font-size:14px;color:var(--muted);line-height:1.45}
+.dn-go{margin-top:auto;padding-top:6px;color:var(--orange2);font-weight:800;font-size:14px}
+.dn-ratio{display:grid;grid-template-columns:150px 1fr;gap:24px;background:linear-gradient(135deg,#2e2110,#1a1006);border:1px solid var(--gold2);border-radius:16px;padding:24px;margin-top:18px}
+.dn-ratio img{width:150px;height:150px;border-radius:14px;object-fit:cover}
+.dn-tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.dn-tag{border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13.5px;font-weight:600;background:#120900}
+.dn-lock{color:var(--muted);border-style:dashed}
+.dn-note{font-size:13.5px;color:var(--muted);margin-top:12px}
+.dn-two{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;margin-top:18px;align-items:start}
+.dn-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px 14px}
+.dn-pad{padding:18px}
+.dn-box ul{margin:8px 0 14px;padding-left:19px;color:var(--muted);font-size:14.5px}
+.dn-box li{margin:5px 0}
+.dn-ev{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.dn-ev:first-child{border-top:0}
+.dn-d{color:var(--gold);font-size:15px;line-height:1.3;font-weight:800}
+.dn a.dn-lockrow{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#1a120a;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;color:var(--muted);margin-top:8px;font-weight:600;font-size:15px}
+.dn a.dn-lockrow:hover{border-color:var(--gold);color:var(--txt)}
+.dn-lockrow em{font-style:normal;font-size:12.5px;white-space:nowrap;color:var(--gold)}
+.dn-offer{margin:48px 0 0;padding:30px 40px;background:linear-gradient(135deg,#3b2a12,#1c130a);border-top:1px solid var(--gold2);display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.dn-offer h2{font-size:30px}
+.dn-foot{padding:20px 40px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.dn-title{font:600 44px/1.1 var(--head);text-transform:uppercase;color:var(--gold);margin-top:8px}
+.dn-lockpage{max-width:660px;margin:0 auto;padding:44px 0;text-align:center}
+.dn-bigl{width:76px;height:76px;margin:0 auto 14px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:32px}
+.dn-lockpage p{color:var(--muted);margin:12px auto 22px;max-width:520px}
+.dn-timer{display:inline-flex;gap:8px;margin-top:16px}
+.dn-timer div{background:var(--card);border:1px solid var(--gold2);border-radius:10px;padding:8px 13px;text-align:center;font-size:12px;color:var(--muted)}
+.dn-timer b{display:block;font:600 32px/1.1 var(--head);color:var(--gold)}
+.dn-ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.dn-ba div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.dn-ba b{display:block;color:var(--gold);font-size:14px;margin-bottom:3px}
+@media (max-width:760px){
+.dn-in{padding:0 18px}
+.dn-top{padding:12px 18px}
+.dn-hide{display:none}
+.dn-sec{padding-top:34px}
+.dn h2{font-size:27px}
+.dn-hero{grid-template-columns:1fr;padding-top:22px}
+.dn h1.dn-h1{font-size:40px}
+.dn-pill{font-size:11.5px}
+.dn-portrait{min-height:230px}
+.dn-acts a.dn-btn,.dn-step a.dn-btn,.dn-ratio a.dn-btn,.dn-offer a.dn-btn,.dn-lockpage a.dn-btn{width:100%}
+.dn-step{grid-template-columns:40px 1fr;padding:13px}
+.dn-step a.dn-btn{grid-column:1/-1}
+.dn-ic{width:40px;height:40px}
+.dn-grid3,.dn-two,.dn-ba{grid-template-columns:1fr}
+.dn-cover{height:96px}
+.dn-ratio{grid-template-columns:1fr;padding:18px}
+.dn-ratio img{width:96px;height:96px}
+.dn-offer{padding:24px 18px}
+.dn-foot{padding:18px}
+.dn-title{font-size:32px}
+.dn-lockpage{padding:30px 0}
+.dn-timer b{font-size:27px}
+.dn-lockrow em{white-space:normal;text-align:right}
+.dn-top a.dn-link{min-height:44px;display:flex;align-items:center}
+}
+body{background:#120900}
+</style><div class="dn"><header class="dn-top"><span class="dn-logo"><img src="../img/logo.png" alt="Академия переговоров Игоря Рызова"></span><nav class="dn-nav"><a class="dn-link dn-hide" href="#" target="_blank" rel="noopener">Закрытый канал</a><a class="dn-link" href="#" target="_blank" rel="noopener">Написать куратору</a></nav></header><div class="dn-in"><div class="dn-hero"><div><span class="dn-pill">Демо-неделя · 9–15 ноября</span><h1 class="dn-h1">Ваша неделя внутри «Мастера переговоров»</h1><p style="max-width:560px">Три урока курса, ИИ-тренажёр и живые эфиры. Каждый день один понятный шаг, 30–60 минут в удобное время.</p><div class="dn-acts"><a class="dn-btn" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Начать с Диагностической карты</a><a class="dn-btn dn-ghost" href="#dn-plan">План на сегодня</a></div></div><div class="dn-portrait"><!-- когда будет видео Игоря: заменить img на видео ГетКурса --><img src="../img/igor.jpg" alt="Игорь Рызов"></div></div></div></div><div class="dn"><div class="dn-in"><section class="dn-sec" id="dn-plan"><h2>Что делать сегодня</h2><p class="dn-lead">Нажмите на день, чтобы увидеть его план.</p><div class="dn-days"><button type="button" class="dn-day" data-dn-day="0" aria-pressed="false"><b>9</b><span>ноя, пн</span></button><button type="button" class="dn-day" data-dn-day="1" aria-pressed="false"><b>10</b><span>ноя, вт</span></button><button type="button" class="dn-day" data-dn-day="2" aria-pressed="false"><b>11</b><span>ноя, ср</span></button><button type="button" class="dn-day" data-dn-day="3" aria-pressed="false"><b>12</b><span>ноя, чт</span></button><button type="button" class="dn-day" data-dn-day="4" aria-pressed="false"><b>13</b><span>ноя, пт</span></button><button type="button" class="dn-day" data-dn-day="5" aria-pressed="false"><b>14</b><span>ноя, сб</span></button><button type="button" class="dn-day" data-dn-day="6" aria-pressed="false"><b>15</b><span>ноя, вс</span></button></div><div class="dn-panel" data-dn-panel="0"><div class="dn-panel-t">9 ноября, пн</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Заполните Диагностическую карту</h3><small>15 вопросов, 5 минут. Разбор откроется сразу, это Ваш подарок.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Открыть карту</a></div><div class="dn-step"><div class="dn-ic">2</div><div><h3>Урок «Типы эмоционального поведения»</h3><small>Четыре модели поведения и тест.</small></div><a class="dn-btn dn-small" href="#">Смотреть</a></div><div class="dn-step"><div class="dn-ic">19:00</div><div><h3>Киноринг «12 разгневанных мужчин»</h3><small>Прямой эфир. Можно быть зрителем или участником.</small></div><a class="dn-btn dn-small dn-ghost" href="#">Календарь</a></div></div><div class="dn-panel" data-dn-panel="1"><div class="dn-panel-t">10 ноября, вт</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Урок «Поведение „Подросток“ – 5 приёмов»</h3><small>Как не скатиться в ответную агрессию.</small></div><a class="dn-btn dn-small" href="#">Смотреть</a></div><div class="dn-step"><div class="dn-ic">2</div><div><h3>Спарринг с Подростком</h3><small>Попробуйте приёмы сразу после урока.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">В спарринг</a></div><div class="dn-step"><div class="dn-ic">19:00</div><div><h3>Переговорные поединки</h3><small>Прямой эфир. Ведёт Алексей Пашин.</small></div><a class="dn-btn dn-small dn-ghost" href="#">Календарь</a></div></div><div class="dn-panel" data-dn-panel="2"><div class="dn-panel-t">11 ноября, ср</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Урок «7 токсичных приёмов»</h3><small>Как распознать приём и что ответить.</small></div><a class="dn-btn dn-small" href="#">Смотреть</a></div><div class="dn-step"><div class="dn-ic">2</div><div><h3>Спарринг с Танком</h3><small>Давит, ставит ультиматумы, торопит.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">В спарринг</a></div><div class="dn-step"><div class="dn-ic">3</div><div><h3>Лекция «Как монетизировать навыки тренера и игропрактика»</h3><small>Ведёт София Бусурина.</small></div><a class="dn-btn dn-small" href="#">Смотреть</a></div></div><div class="dn-panel" data-dn-panel="3"><div class="dn-panel-t">12 ноября, чт</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Подготовьтесь к своей реальной встрече</h3><small>Мистер Рацио за 10 минут готовит аргументы и ответы на возражения.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Подготовиться</a></div><div class="dn-step"><div class="dn-ic">19:00</div><div><h3>Мастер-класс Игоря Рызова «Переговоры: ключ к доходам»</h3><small>Игорь разбирает ситуации из диагностических карт и показывает курс изнутри.</small></div><a class="dn-btn dn-small dn-ghost" href="#">Календарь</a></div></div><div class="dn-panel" data-dn-panel="4"><div class="dn-panel-t">13 ноября, пт</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Видео выпускников «Точка А – точка Б»</h3><small>В закрытом канале, в удобное время.</small></div><a class="dn-btn dn-small" href="#">В канал</a></div><div class="dn-step"><div class="dn-ic">2</div><div><h3>Спарринг на выбор</h3><small>Закрепите то, что получалось хуже всего.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">В спарринг</a></div></div><div class="dn-panel" data-dn-panel="5"><div class="dn-panel-t">14 ноября, сб</div><div class="dn-step"><div class="dn-ic">1</div><div><h3>Повторная диагностика и замер</h3><small>Сравните результат с первым днём.</small></div><a class="dn-btn dn-small" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Пройти</a></div><div class="dn-step"><div class="dn-ic">2</div><div><h3>Сертификат участника</h3><small>Для всех, кто посмотрел 3 урока, заполнил анкету и провёл хотя бы 2 спарринга. Придёт на почту.</small></div><a class="dn-btn dn-small dn-ghost" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Мой результат</a></div></div><div class="dn-panel" data-dn-panel="6"><div class="dn-panel-t">15 ноября, вс</div><div class="dn-step"><div class="dn-ic">!</div><div><h3>Последний день демо-доступа</h3><small>До 23:59 МСК. Сегодня стартует поток.</small></div><a class="dn-btn dn-small" href="#">Что дальше</a></div></div></section></div></div>
+<script>
+(function(){var r=document.getElementById('dn-plan');if(!r)return;r.classList.add('dn-js');
+var t=r.querySelectorAll('[data-dn-day]'),p=r.querySelectorAll('[data-dn-panel]');
+function show(i){for(var j=0;j<t.length;j++){t[j].setAttribute('aria-pressed',j==i?'true':'false');p[j].classList.toggle('dn-on',j==i)}}
+for(var k=0;k<t.length;k++)t[k].addEventListener('click',function(){show(+this.getAttribute('data-dn-day'))});
+var m=new Date(Date.now()+3*3600000),i=0;
+if(m.getUTCFullYear()==2026&&m.getUTCMonth()==10){i=Math.min(6,Math.max(0,m.getUTCDate()-9))}else if(m>new Date(Date.UTC(2026,10,15)))i=6;
+show(i)})();
+</script><div class="dn"><div class="dn-in"><section class="dn-sec"><h2>Три урока курса</h2><p class="dn-lead">Те же уроки, что и у учеников потока.</p><div class="dn-grid3"><a class="dn-lesson" href="#"><div class="dn-cover"><span class="dn-b">Блок «Жёсткие переговоры: причины и следствия»</span><span class="dn-n">01</span></div><div class="dn-lin"><h3>Типы эмоционального поведения</h3><p>Четыре модели поведения в переговорах: Подросток, Робкий, Танк, Лидер. Тест: какая модель чаще всего побеждает в Вас самих.</p><span class="dn-go">Смотреть урок →</span></div></a><a class="dn-lesson" href="#"><div class="dn-cover"><span class="dn-b">Блок «Жёсткие переговоры: причины и следствия»</span><span class="dn-n">02</span></div><div class="dn-lin"><h3>Поведение «Подросток» – 5 приёмов</h3><p>Как разговаривать с тем, кто срывается, хамит и переходит на личности, и не скатиться в ответную агрессию.</p><span class="dn-go">Смотреть урок →</span></div></a><a class="dn-lesson" href="#"><div class="dn-cover"><span class="dn-b">Блок «Грязные приёмы в переговорах»</span><span class="dn-n">03</span></div><div class="dn-lin"><h3>7 токсичных приёмов</h3><p>Как их распознать в разговоре и что ответить, чтобы приём перестал работать.</p><span class="dn-go">Смотреть урок →</span></div></a></div></section></div></div><div class="dn"><div class="dn-in"><section class="dn-sec"><h2>Мистер Рацио</h2><div class="dn-ratio"><img src="../img/ratio.jpg" alt="Мистер Рацио"><div><h3>Ваш ИИ-тренажёр на 7 дней</h3><p class="dn-muted" style="margin-top:4px">Трудный собеседник давит, Вы отвечаете. В конце получаете разбор и оценку. Без VPN и ChatGPT, на телефон ставится иконкой.</p><div class="dn-tags"><span class="dn-tag">Диагностическая карта с разбором</span><span class="dn-tag">Спарринг: Танк</span><span class="dn-tag">Спарринг: Подросток</span><span class="dn-tag">Подготовка к реальной встрече</span><span class="dn-tag dn-lock">🔒 Робкий</span><span class="dn-tag dn-lock">🔒 Лидер</span><span class="dn-tag dn-lock">🔒 Детектор грязных приёмов</span></div><a class="dn-btn" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Сразиться с Мистером Рацио</a><p class="dn-note">Вход по коду с той почты, на которую Вы купили демо-неделю. Мистер Рацио сейчас в бета-версии, и Вы среди первых, кто на нём тренируется.</p></div></div></section></div></div><div class="dn"><div class="dn-in"><section class="dn-sec"><h2>Эфиры недели</h2><div class="dn-two"><div class="dn-box"><div class="dn-ev"><div class="dn-d">9.11, пн<br>19:00 МСК</div><div><h3>Киноринг «12 разгневанных мужчин»</h3><small>Ведут Светлана Дубкова и Алексей Афанасьев. Можно быть зрителем или участником.</small></div></div><div class="dn-ev"><div class="dn-d">10.11, вт<br>19:00 МСК</div><div><h3>Переговорные поединки</h3><small>Ведёт Алексей Пашин, тренер Академии.</small></div></div><div class="dn-ev"><div class="dn-d">11.11, ср</div><div><h3>Лекция «Как монетизировать навыки тренера и игропрактика»</h3><small>Ведёт София Бусурина.</small></div></div><div class="dn-ev"><div class="dn-d">12.11, чт<br>19:00 МСК</div><div><h3>Мастер-класс Игоря Рызова «Переговоры: ключ к доходам»</h3><small>Как влиять на решения, не уступать давлению и зарабатывать больше.</small></div></div></div><div class="dn-box dn-pad"><h3>Всё под рукой</h3><ul><li>Ссылки на эфиры приходят на почту и в канал.</li><li>Записи лежат здесь, в личном кабинете, до 15 ноября.</li></ul><a class="dn-btn dn-small dn-ghost" href="#">Добавить в календарь</a><p style="margin-top:12px"><a class="dn-link" href="#" target="_blank" rel="noopener">Перейти в закрытый канал</a></p></div></div></section></div></div><div class="dn"><div class="dn-in"><section class="dn-sec"><h2>Что дальше в курсе</h2><p class="dn-lead">Вы проходите три урока. Вся программа курса откроется после покупки.</p><div style="margin-top:14px"><a class="dn-lockrow" href="#">🔒 Жёсткие переговоры: Танк, Робкий, Лидер <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 Стратегия и тактика <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 ИИ в переговорах <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 Грязные приёмы: следующие уроки <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 Коучинг в переговорах <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 Методология проведения тренингов <em>Откроется в курсе</em></a><a class="dn-lockrow" href="#">🔒 Тренажёры и дипломная работа <em>Откроется в курсе</em></a></div></section></div></div><div class="dn"><div class="dn-offer"><div><h2>990 ₽ засчитываются в оплату любого тарифа</h2><p class="dn-muted" style="margin-top:6px">Поток «Мастер переговоров» стартует 15 ноября.</p></div><a class="dn-btn" href="#">Продолжить обучение</a></div><div class="dn-foot"><span>Демо-доступ до 15 ноября, 23:59 МСК</span><a class="dn-link" href="#" target="_blank" rel="noopener">Служба заботы</a></div></div><div style="background:#f3f1ee;color:#222;font:700 14px Arial,sans-serif;padding:9px 16px">Блоки-мосты для уроков, на странице урока они стоят под видео</div><style>
+.dn-bridge{--gold2:#c79a4f;--muted:#c2b5a3;--orange:#ff9800;--orange2:#ffb648;box-sizing:border-box;display:grid;grid-template-columns:84px 1fr auto;gap:16px;align-items:center;background:linear-gradient(135deg,#3b2a12,#1c130a);border:1px solid var(--gold2);border-radius:14px;padding:16px;margin:20px 0;font-family:"Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4;line-height:1.5}
+.dn-bridge img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+.dn-bridge h3{margin:0;font:800 18px/1.3 "Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4}
+.dn-bridge p{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.dn-bridge a{display:inline-block;border-radius:10px;padding:16px 24px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:15px;line-height:1.25;text-align:center;text-decoration:none;background:linear-gradient(180deg,var(--orange2),var(--orange));color:#120900;box-shadow:0 4px 0 #b86a00}
+.dn-bridge a:hover{filter:brightness(1.08)}
+@media (max-width:760px){.dn-bridge{grid-template-columns:60px 1fr}.dn-bridge img{width:60px;height:60px}.dn-bridge a{grid-column:1/-1;width:100%}}
+</style>
+<div class="dn-bridge"><img src="../img/ratio.jpg" alt="Мистер Рацио"><div><h3>Заполните Диагностическую карту</h3><p>15 вопросов, 5 минут. Узнаете свой профиль переговорщика, разбор откроется сразу.</p></div><a href="https://trener.ryzov.ru" target="_blank" rel="noopener">Открыть карту</a></div><style>
+.dn-bridge{--gold2:#c79a4f;--muted:#c2b5a3;--orange:#ff9800;--orange2:#ffb648;box-sizing:border-box;display:grid;grid-template-columns:84px 1fr auto;gap:16px;align-items:center;background:linear-gradient(135deg,#3b2a12,#1c130a);border:1px solid var(--gold2);border-radius:14px;padding:16px;margin:20px 0;font-family:"Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4;line-height:1.5}
+.dn-bridge img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+.dn-bridge h3{margin:0;font:800 18px/1.3 "Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4}
+.dn-bridge p{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.dn-bridge a{display:inline-block;border-radius:10px;padding:16px 24px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:15px;line-height:1.25;text-align:center;text-decoration:none;background:linear-gradient(180deg,var(--orange2),var(--orange));color:#120900;box-shadow:0 4px 0 #b86a00}
+.dn-bridge a:hover{filter:brightness(1.08)}
+@media (max-width:760px){.dn-bridge{grid-template-columns:60px 1fr}.dn-bridge img{width:60px;height:60px}.dn-bridge a{grid-column:1/-1;width:100%}}
+</style>
+<div class="dn-bridge"><img src="../img/ratio.jpg" alt="Мистер Рацио"><div><h3>Проверьте приёмы на Подростке</h3><p>Мистер Рацио сорвётся и перейдёт на личности, а Вы попробуете ответить. В конце получите разбор и оценку.</p></div><a href="https://trener.ryzov.ru" target="_blank" rel="noopener">В спарринг</a></div><style>
+.dn-bridge{--gold2:#c79a4f;--muted:#c2b5a3;--orange:#ff9800;--orange2:#ffb648;box-sizing:border-box;display:grid;grid-template-columns:84px 1fr auto;gap:16px;align-items:center;background:linear-gradient(135deg,#3b2a12,#1c130a);border:1px solid var(--gold2);border-radius:14px;padding:16px;margin:20px 0;font-family:"Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4;line-height:1.5}
+.dn-bridge img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+.dn-bridge h3{margin:0;font:800 18px/1.3 "Manrope","Segoe UI",Arial,sans-serif;color:#f6efe4}
+.dn-bridge p{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.dn-bridge a{display:inline-block;border-radius:10px;padding:16px 24px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:15px;line-height:1.25;text-align:center;text-decoration:none;background:linear-gradient(180deg,var(--orange2),var(--orange));color:#120900;box-shadow:0 4px 0 #b86a00}
+.dn-bridge a:hover{filter:brightness(1.08)}
+@media (max-width:760px){.dn-bridge{grid-template-columns:60px 1fr}.dn-bridge img{width:60px;height:60px}.dn-bridge a{grid-column:1/-1;width:100%}}
+</style>
+<div class="dn-bridge"><img src="../img/ratio.jpg" alt="Мистер Рацио"><div><h3>Проверьте себя на Танке</h3><p>Мистер Рацио давит, ставит ультиматумы и торопит, а Вы отвечаете. В конце получите разбор и оценку.</p></div><a href="https://trener.ryzov.ru" target="_blank" rel="noopener">В спарринг</a></div><div style="background:#f3f1ee;color:#222;font:700 14px Arial,sans-serif;padding:9px 16px">Закрытый урок</div>
+<div class="dn"><header class="dn-top"><span class="dn-logo"><img src="../img/logo.png" alt="Академия переговоров Игоря Рызова"></span><nav class="dn-nav"><a class="dn-link" href="#" target="_blank" rel="noopener">← К плану недели</a></nav></header><div class="dn-in"><div class="dn-lockpage"><div class="dn-bigl">🔒</div><div class="dn-title" style="font-size:38px">Этот урок откроется в курсе</div><p>Поток «Мастер переговоров» стартует 15 ноября. Ваши 990 ₽ засчитываются в оплату любого тарифа.</p><div class="dn-acts" style="justify-content:center"><a class="dn-btn" href="#">Посмотреть, что дальше</a><a class="dn-btn dn-ghost" href="#">Вернуться к неделе</a></div></div></div></div><div style="background:#f3f1ee;color:#222;font:700 14px Arial,sans-serif;padding:9px 16px">Последний день</div>
+<div class="dn"><header class="dn-top"><span class="dn-logo"><img src="../img/logo.png" alt="Академия переговоров Игоря Рызова"></span><nav class="dn-nav"><a class="dn-link" href="#" target="_blank" rel="noopener">← К плану недели</a></nav></header><div class="dn-in"><span class="dn-pill" style="margin-top:28px">Демо-неделя заканчивается</span><div class="dn-title" style="font-size:48px">Демо-доступ закрывается 15 ноября в 23:59 МСК</div><div class="dn-timer" id="dn-timer"><div><b data-h>--</b>часов</div><div><b data-m>--</b>минут</div><div><b data-s>--</b>секунд</div></div><section class="dn-sec" style="padding-top:30px"><h2>Что изменилось за неделю</h2><p class="dn-lead">Сравните первый замер и повторный. Результат есть в Мистере Рацио.</p><div class="dn-ba"><div><b>9 ноября</b>Первый спарринг: точка отсчёта</div><div><b>14 ноября</b>Повторный замер: сравнение с первым днём</div></div><div class="dn-acts"><a class="dn-btn dn-ghost" href="https://trener.ryzov.ru" target="_blank" rel="noopener">Открыть мой результат</a></div></section><section class="dn-sec" style="padding-bottom:40px"><h2>Продолжите с того места, где остановились</h2><p class="dn-lead">15 ноября стартует поток. Уроки и задания сохранятся, 990 ₽ засчитаются в оплату любого тарифа. ИИ-тренажёр входит в тарифы Карьера, Бизнес и Тренер.</p><div class="dn-acts"><a class="dn-btn" href="#">Выбрать тариф</a><a class="dn-btn dn-ghost" href="#">Задать вопрос менеджеру</a></div></section></div></div>
+<script>
+(function(){var e=document.getElementById('dn-timer');if(!e)return;var end=Date.UTC(2026,10,15,20,59,0);
+function p(n){return (n<10?'0':'')+n}
+function tick(){var s=Math.max(0,Math.floor((end-Date.now())/1000));
+e.querySelector('[data-h]').textContent=p(Math.floor(s/3600));e.querySelector('[data-m]').textContent=p(Math.floor(s%3600/60));e.querySelector('[data-s]').textContent=p(s%60)}
+tick();setInterval(tick,1000)})();
+</script></body></html>
